@@ -1,5 +1,16 @@
 # @version ^0.2.0
 
-# List of all users and books
-# Can be rented/sold, updated by owner 
-# Price goes up every time someone new borrows the book
+struct books:
+    key: uint256
+    owner: address
+    numberOfTimeBorrowed: uint256
+    rating: uint256
+    price: uint256
+    uniqueID: uint256
+
+struct users:
+    borrowedBooks: books[10]
+    booksOwned: books[10]
+
+
+
